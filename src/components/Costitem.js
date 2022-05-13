@@ -1,5 +1,6 @@
 import './CostItem.css';
 import CostDate from "./CostDate";
+import Costs from "./Costs";
 
 function Costitem(props){
 

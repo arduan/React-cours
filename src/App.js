@@ -1,4 +1,4 @@
-import Costitem from "./components/Costitem";
+import Costs from "./components/Costs";
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       amount: 456.99
     },
     {
-      date: new Date(2022, 5, 13),
+      date: new Date(20212, 5, 13),
       description: 'Джинсы',
       amount: 19.99
     },
@@ -23,14 +23,11 @@ function App() {
 
 
   return (
-    <div>
-      <h1>Начнем изучение React.</h1>
+      <div>
+        <h1>Начнем изучать React</h1>
+        <Costs costs={costs}/>
+      </div>
 
-        <Costitem date={costs[0].date} description = {costs[0].description} amount ={costs[0].amount}></Costitem>
-        <Costitem date={costs[1].date} description = {costs[1].description} amount ={costs[1].amount}></Costitem>
-        <Costitem date={costs[2].date} description = {costs[2].description} amount ={costs[2].amount}></Costitem>
-
-    </div>
 
   );
 }
