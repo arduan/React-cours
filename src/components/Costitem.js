@@ -2,7 +2,10 @@ import './CostItem.css';
 import CostDate from "./CostDate";
 
 
-function Costitem(props){
+const Costitem=(props)=>{
+    const  changeDescriptionHendler = () =>{
+        console.log('Привет еще раз')
+    }
 
 
     return (<div className='cost-item'>
@@ -11,7 +14,7 @@ function Costitem(props){
                 <h2>{props.description}</h2>
                 <div className='cost-item__price'>${props.amount}</div>
             </div>
-
+            <button onClick={changeDescriptionHendler}>Изменить описание</button>
             </div>
     );
 }
