@@ -3,7 +3,7 @@ import CostDate from "./CostDate";
 
 
 const Costitem=(props)=>{
-    const  changeDescriptionHendler = () =>{
+    const  changeDescriptionHandler = () =>{
         console.log('Привет еще раз')
     }
 
@@ -14,7 +14,7 @@ const Costitem=(props)=>{
                 <h2>{props.description}</h2>
                 <div className='cost-item__price'>${props.amount}</div>
             </div>
-            <button onClick={changeDescriptionHendler}>Изменить описание</button>
+            <button onClick={changeDescriptionHandler}>Изменить описание</button>
             </div>
     );
 }
