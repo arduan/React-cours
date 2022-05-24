@@ -18,12 +18,16 @@ const Costs=(props)=> {
 
         <div className='costs'>
             <CostsFilter year={selectedYear} onChangeYear={ yearChangeHandler}/>
-            {filteredCosts.map((cost) =>(
-                <Costitem key={cost.id}
-                          date={cost.date}
-                          description = {cost.description}
-                          amount ={cost.amount}/>
-            ))}
+            {filteredCosts.length === 0 && <p>В Этом Году Расходов Нет</p>}
+            {filteredCosts.length > 0 &&
+            filteredCosts.map((cost) =>(
+                    <Costitem key={cost.id}
+                              date={cost.date}
+                              description = {cost.description}
+                              amount ={cost.amount}/>
+                ))}
+
+
         </div>
         </div>
     );
