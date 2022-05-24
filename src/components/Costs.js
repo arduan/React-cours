@@ -8,13 +8,21 @@ const Costs=(props)=> {
     const yearChangeHandler = (year) => {
         setSelectedYear(year);
     }
+    const filteredCosts = props.costs.filter(cost =>{
+        return cost.date.getFullYear().toString() === selectedYear;
+    })
+
+
     return (
         <div>
 
         <div className='costs'>
             <CostsFilter year={selectedYear} onChangeYear={ yearChangeHandler}/>
-            {props.costs.map((costs) =>(
-                <Costitem date={costs.date} description = {costs.description} amount ={costs.amount}/>
+            {filteredCosts.map((cost) =>(
+                <Costitem key={cost.id}
+                          date={cost.date}
+                          description = {cost.description}
+                          amount ={cost.amount}/>
             ))}
         </div>
         </div>

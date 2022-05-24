@@ -2,7 +2,7 @@ import './CostItem.css';
 import CostDate from "./CostDate";
 
 
-const Costitem=(props)=>{
+const CostItem=(props)=>{
 
 
     return (<div className='cost-item'>
@@ -16,4 +16,4 @@ const Costitem=(props)=>{
     );
 }
 
-export default Costitem;
+export default CostItem;
