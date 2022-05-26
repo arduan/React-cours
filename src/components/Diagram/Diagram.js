@@ -1,19 +1,25 @@
-import DiagramBar from "./DiagramBar";
+import DiagramBar from "../DiagramBar";
 import './Diagram.css'
 
 
 const Diagram = (props) => {
+    const dataSetsValue = props.dataSets.map
+    (dataSet => dataSet.value)
 
-    return <div className='diagram'>
-        {props.dataSets.map(dataSet => <DiagramBar
+    const maxMothCosts = Math.max(...dataSetsValue);
+
+    return(
+        <div className='diagram'>
+        {props.dataSets.map((dataSet) => (
+            <DiagramBar
             key={dataSet.id}
             value={dataSet.value}
-            maxValue={null}
-            label={dataSet.label}/>)
-
-
+            maxValue={maxMothCosts}
+            label={dataSet.label}
+            />
+            ))}
     </div>
-
-}
+    );
+};
 export default Diagram;
 
