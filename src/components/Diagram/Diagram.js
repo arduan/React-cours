@@ -1,4 +1,4 @@
-import DiagramBar from "../DiagramBar";
+import DiagramBar from "./DiagramBar";
 import './Diagram.css'
 
 

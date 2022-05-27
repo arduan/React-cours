@@ -1,4 +1,4 @@
-import Diagram from './Diagram/Diagram';
+import Diagram from "../Diagram/Diagram";
 
 const CostsDiagram = (props) => {
     const diagramDataSets = [
